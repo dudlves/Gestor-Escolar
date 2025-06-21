@@ -21,15 +21,13 @@ export default function FormularioAluno({ onAlunoCriado }: Props) {
   async function handleSubmit(e: FormEvent) {
     e.preventDefault();
 
-    // Validar entradas
-    if (
-      !nome.trim() ||
-      notas.some((n) => n === "" || isNaN(Number(n)) || Number(n) < 0 || Number(n) > 10) ||
-      frequencia === "" ||
-      isNaN(Number(frequencia)) ||
-      Number(frequencia) < 0 ||
-      Number(frequencia) > 100
-    ) {
+    const isValidNumber = (value: string, min: number, max: number) => {
+    const num = Number(value);
+    return value !== "" && !isNaN(num) && num >= min && num <= max;
+    };
+
+    if (!nome.trim() || 
+      notas.some((n) => !isValidNumber(n, 0, 10)) || !isValidNumber(frequencia, 0, 100)) {
       alert("Preencha os dados corretamente.");
       return;
     }
@@ -54,39 +52,11 @@ export default function FormularioAluno({ onAlunoCriado }: Props) {
 
   return (
     <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        placeholder="Nome do aluno"
-        value={nome}
-        onChange={(e: ChangeEvent<HTMLInputElement>) => setNome(e.target.value)}
-        required
-      />
-
+      <input type="text" placeholder="Nome do aluno" value={nome} onChange={(e: ChangeEvent<HTMLInputElement>) => setNome(e.target.value)} required/>
       {notas.map((nota, i) => (
-        <input
-          key={i}
-          type="number"
-          min="0"
-          max="10"
-          step="0.1"
-          placeholder={`Nota ${i + 1}`}
-          value={nota}
-          onChange={(e: ChangeEvent<HTMLInputElement>) => handleNotaChange(i, e.target.value)}
-          required
-        />
+        <input key={i} type="number" min="0" max="10" step="0.1" placeholder={`Nota ${i + 1}`} value={nota} onChange={(e: ChangeEvent<HTMLInputElement>) => handleNotaChange(i, e.target.value)} required />
       ))}
-
-      <input
-        type="number"
-        min="0"
-        max="100"
-        step="0.1"
-        placeholder="Frequência (%)"
-        value={frequencia}
-        onChange={(e: ChangeEvent<HTMLInputElement>) => setFrequencia(e.target.value)}
-        required
-      />
-
+      <input type="number" min="0" max="100" step="0.1" placeholder="Frequência (%)" value={frequencia} onChange={(e: ChangeEvent<HTMLInputElement>) => setFrequencia(e.target.value)} required />
       <button type="submit">Cadastrar aluno</button>
     </form>
   );

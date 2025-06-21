@@ -1,5 +1,4 @@
-/* index.css */
-
+/* styles.css */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f0f2f5;
@@ -11,13 +10,44 @@ body {
 h1 {
   text-align: center;
   color: #2c3e50;
+  margin-bottom: 30px;
 }
 
 .container {
-  max-width: 700px;
+  max-width: 850px;
   margin: 0 auto;
   background: white;
-  padding: 25px;
-  border-radius: 8px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
 }
+
+.lista-alunos li,
+.list-disc li {
+  margin-bottom: 8px;
+  padding: 4px 8px;
+  border-left: 4px solid #007bff;
+  background: #f9f9f9;
+  border-radius: 4px;
+  list-style-type: none;
+}
+
+.text-muted {
+  color: #888;
+  font-style: italic;
+}
+
+.lista-alunos li strong {
+  color: #333;
+}
+
+.lista-alunos li strong:nth-of-type(2) {
+  color: red;
+}
+
+.list-disc, .lista-alunos {
+  padding-left: 20px;
+  list-style: none;
+}
+
+

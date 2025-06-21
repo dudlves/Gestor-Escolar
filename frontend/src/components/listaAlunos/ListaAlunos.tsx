@@ -1,5 +1,6 @@
 import { useMemo } from "react";
-import type { Aluno } from "../App";
+import type { Aluno } from "../../App";
+
 
 interface Props {
   alunos: Aluno[];

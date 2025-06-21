@@ -1,7 +1,7 @@
 import { buscarAlunos } from "./services/alunoService";
 import { useEffect, useState } from "react";
-import FormularioAluno from "./components/FormularioAluno";
-import ListaAlunos from "./components/ListaAlunos";
+import FormularioAluno from "./components/formularioAluno/FormularioAluno";
+import ListaAlunos from "./components/listaAlunos/ListaAlunos";
 import "./styles.css";
 
 
