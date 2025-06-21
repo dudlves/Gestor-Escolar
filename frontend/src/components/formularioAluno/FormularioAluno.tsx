@@ -1,9 +1,7 @@
 import type { ChangeEvent, FormEvent } from "react";
 import { useState } from "react";
-import { criarAluno } from "../services/alunoService";
+import { criarAluno } from "../../services/alunoService";
 import "./FormularioAluno.css";
-
-
 
 interface Props {
   onAlunoCriado: () => void;
