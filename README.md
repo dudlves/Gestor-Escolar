@@ -44,7 +44,7 @@ Este projeto permite que um professor organize as notas (0 a 10) de 5 disciplina
 ### 1. Clone o repositório
 
 ```bash
-git clone https:https://github.com/dudlves/Gestor-Escolar.git
+git clone https://github.com/dudlves/Gestor-Escolar.git
 cd Gestor-Escolar
 ```
 
