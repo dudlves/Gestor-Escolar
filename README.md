@@ -39,6 +39,18 @@ Este projeto permite que um professor organize as notas (0 a 10) de 5 disciplina
 
 ---
 
+## ⚙️ Decisões de projeto
+
+Java 17 com Spring Boot foi escolhido para garantir performance e facilidade na criação da API.
+
+Spring Data JPA simplifica o acesso ao banco e H2 Database facilita o desenvolvimento local sem configuração extra.  
+
+React com TypeScript possibilita um front-end moderno e seguro. 
+
+Maven facilita o gerenciamento das dependências e automatiza o build do back-end.
+
+---
+
 ## ▶️ Como executar o projeto
 
 > 🧠 **Observação**: será necessário abrir **dois terminais separados**, um para o back-end e outro para o front-end.
