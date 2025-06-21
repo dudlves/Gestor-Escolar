@@ -41,6 +41,8 @@ Este projeto permite que um professor organize as notas (0 a 10) de 5 disciplina
 
 ## ▶️ Como executar o projeto
 
+> 🧠 **Observação**: será necessário abrir **dois terminais separados**, um para o back-end e outro para o front-end.
+
 ### 1. Clone o repositório
 
 ```bash
